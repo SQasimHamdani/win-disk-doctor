@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "win-disk-doctor"
+version = "0.1.0"
+description = "Read-only Windows disk cleanup report: what is using space, and what is safe to clean."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Syed Qasim Hamdani" }]
+keywords = ["windows", "disk-space", "disk-cleanup", "temp-files", "storage", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/SQasimHamdani/win-disk-doctor"
+Issues = "https://github.com/SQasimHamdani/win-disk-doctor/issues"
+
+[project.scripts]
+win-disk-doctor = "win_disk_doctor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
