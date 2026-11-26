@@ -5,6 +5,8 @@ All notable changes are documented here. The format follows
 [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
+### Fixed
+- README usage commands can be copied and run as written (#1).
 
 ## [0.1.0] - 2026-11-26
 ### Added

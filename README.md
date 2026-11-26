@@ -71,10 +71,22 @@ Windows Installer cache  [LEAVE ALONE]
 
 ## Usage
 
+Plain-language report, largest first:
+
 ```bat
-win-disk-doctor              rem plain-language report, largest first
-win-disk-doctor --json       rem the same data for scripts
-python -m win_disk_doctor    rem if the command is not on your PATH
+win-disk-doctor
+```
+
+The same data for scripts:
+
+```bat
+win-disk-doctor --json
+```
+
+If the command is not on your PATH:
+
+```bat
+python -m win_disk_doctor
 ```
 
 Some locations need an administrator terminal to be read. Without it they are reported as
